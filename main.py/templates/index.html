@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ATS Resume Analyzer</title>
+</head>
+<body>
+
+<h2>Upload Resume</h2>
+
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="resume" required><br><br>
+
+    <textarea name="job_description" rows="6" cols="50"
+    placeholder="Paste job description here"></textarea><br><br>
+
+    <button type="submit">Analyze Resume</button>
+</form>
+
+{% if score %}
+<h3>ATS Score: {{ score }}%</h3>
+
+<h4>Matched Skills</h4>
+<ul>
+{% for skill in matched %}
+<li>{{ skill }}</li>
+{% endfor %}
+</ul>
+
+<h4>Missing Skills</h4>
+<ul>
+{% for skill in missing %}
+<li>{{ skill }}</li>
+{% endfor %}
+</ul>
+{% endif %}
+
+</body>
+</html>

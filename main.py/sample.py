@@ -42,6 +42,7 @@ def extract_job_skills(job_text):
 
     return job_skills
 
+#resume skill extraction
 def extract_resume_text(file_path):
     with open(file_path, "rb") as file:
         reader = PyPDF2.PdfReader(file)
@@ -51,6 +52,7 @@ def extract_resume_text(file_path):
             text += page.extract_text()
 
     return text
+#ats sccore
 def calculate_ats_score(resume_skills, job_skills):
     matched = []
     missing = []
