@@ -15,6 +15,17 @@ skills_db = [
     "embedded systems"
 ]
 
+#extract resume
+def extract_resume_text(file_path):
+    with open(file_path, "rb") as file:
+        reader = PyPDF2.PdfReader(file)
+        text = ""
+
+        for page in reader.pages:
+            text += page.extract_text()
+
+    return text
+
 #required skills
 job_description = """
 Looking for a Python developer and java developer with knowledge of SQL, Git,
@@ -42,16 +53,6 @@ def extract_job_skills(job_text):
 
     return job_skills
 
-#resume skill extraction
-def extract_resume_text(file_path):
-    with open(file_path, "rb") as file:
-        reader = PyPDF2.PdfReader(file)
-        text = ""
-
-        for page in reader.pages:
-            text += page.extract_text()
-
-    return text
 #ats sccore
 def calculate_ats_score(resume_skills, job_skills):
     matched = []
@@ -67,29 +68,3 @@ def calculate_ats_score(resume_skills, job_skills):
 
     return score, matched, missing
 
-resume_text = extract_resume_text("text_resume.pdf")
-
-print("Resume Content:\n")
-print(resume_text)
-
-skills_found = detect_skills(resume_text)
-
-print("\nDetected Skills:")
-for skill in skills_found:
-    print(skill)
-
-job_skills = extract_job_skills(job_description)
-
-score, matched, missing = calculate_ats_score(skills_found, job_skills)
-
-print("\nJob Skills:", job_skills)
-
-print("\nATS Score:", round(score,2), "%")
-
-print("\nMatched Skills:")
-for skill in matched:
-    print(skill)
-
-print("\nMissing Skills:")
-for skill in missing:
-    print(skill)

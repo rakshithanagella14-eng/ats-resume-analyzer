@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>ATS Resume Analyzer</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
@@ -18,6 +19,24 @@
 
 {% if score %}
 <h3>ATS Score: {{ score }}%</h3>
+<canvas id="atsChart" width="420" height="220"></canvas>
+<script>
+var score = {{ score|default(0) }};
+var matched = {{ matched|length if matched else 0 }};
+var missing = {{ missing|length if missing else 0 }};
+
+var ctx = document.getElementById("atsChart").getContext("2d");
+
+new Chart(ctx, {
+    type: "doughnut",
+    data: {
+        labels: ["Matched Skills", "Missing Skills"],
+        datasets: [{
+            data: [matched, missing]
+        }]
+    }
+});
+</script>
 
 <h4>Matched Skills</h4>
 <ul>

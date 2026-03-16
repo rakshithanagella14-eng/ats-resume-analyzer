@@ -1,6 +1,10 @@
 from flask import Flask, render_template, request
 import os
 
+if not os.path.exists("uploads"):
+    os.makedirs("uploads")
+from sample import extract_resume_text, detect_skills, extract_job_skills, calculate_ats_score
+
 app = Flask(__name__)
 UPLOAD_FOLDER = "uploads"
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
