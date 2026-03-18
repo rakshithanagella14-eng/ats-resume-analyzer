@@ -86,12 +86,14 @@ http://127.0.0.1:5000
 ### Home Page
 ![alt text](screenshots/homepage.png)
 
+
 ### Resume Upload
 ![alt text](screenshots/upload.png)
 
+
 ### ATS Analysis Result
 ![alt text](screenshots/results.png)
-![alt text](<screenshots/ats score results.png>)
+
 
 ### ATS Analysis chart
 ![alt text](screenshots/chart.png)
