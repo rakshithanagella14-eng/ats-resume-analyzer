@@ -7,15 +7,29 @@ A web application that analyzes resumes and compares them with job descriptions 
 Live Demo:
 https://ats-resume-analyzer-gtnq.onrender.com
 
-## Features
 
-- Upload resume in PDF format
-- Extract resume text automatically
-- Detect technical skills from resume
-- Compare resume skills with job description
-- Calculate ATS compatibility score
-- Display matched and missing skills
-- Visualize results using charts
+## Why This Project?
+
+Many resumes get rejected by Applicant Tracking Systems (ATS) before reaching recruiters due to missing or mismatched skills.
+
+This project was built to simulate how ATS systems evaluate resumes and to help users understand:
+- Which skills match a job description
+- Which important skills are missing
+- How well their resume aligns with a role
+
+---
+
+## What Makes This Project Different?
+
+Unlike basic resume keyword checkers, this project:
+
+- Provides a clear ATS compatibility score
+- Identifies both matched and missing skills
+- Visualizes results using charts for better understanding
+- Offers a simple web interface for real-time analysis
+
+---
+
 
 ## Tech Stack
 
@@ -89,6 +103,14 @@ http://127.0.0.1:5000
 - Advanced NLP skill detection
 - Resume suggestions for improvement
 - Multiple job comparison
+
+
+## Development Note
+
+This project was built in a short time frame to simulate rapid prototyping and iterative development. 
+
+The commit history reflects continuous improvements, debugging, and feature additions, similar to real-world development workflows.
+
 
 
 ## Author
