@@ -19,7 +19,22 @@
 
 {% if score %}
 <h3>ATS Score: {{ score }}%</h3>
-<canvas id="atsChart" width="420" height="220"></canvas>
+
+<h4>Matched Skills</h4>
+<ul>
+{% for skill in matched %}
+<li>{{ skill }}</li>
+{% endfor %}
+</ul>
+
+<h4>Missing Skills</h4>
+<ul>
+{% for skill in missing %}
+<li>{{ skill }}</li>
+{% endfor %}
+</ul>
+{% endif %}
+<canvas id="atsChart" width="50" height="10"></canvas>
 <script>
 var score = {{ score|default(0) }};
 var matched = {{ matched|length if matched else 0 }};
@@ -37,21 +52,5 @@ new Chart(ctx, {
     }
 });
 </script>
-
-<h4>Matched Skills</h4>
-<ul>
-{% for skill in matched %}
-<li>{{ skill }}</li>
-{% endfor %}
-</ul>
-
-<h4>Missing Skills</h4>
-<ul>
-{% for skill in missing %}
-<li>{{ skill }}</li>
-{% endfor %}
-</ul>
-{% endif %}
-
 </body>
 </html>
