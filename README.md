@@ -4,7 +4,7 @@
 A web-based application that analyzes resumes against job descriptions and calculates an **ATS compatibility score using a weighted skill-matching algorithm**.
 
 🔗 **Live Demo:**  
-https://ats-resume-analyzer-gtnq.onrender.com
+👉 Try it here: https://ats-resume-analyzer-gtnq.onrender.com
 
 ---
 
@@ -99,6 +99,15 @@ python main.py
 - Multi-job comparison feature
 
 ---
+
+---
+
+# 🧪 Development Note
+
+This project was built in a short time frame to simulate rapid prototyping and iterative development.
+
+The commit history reflects continuous improvements, debugging, and feature additions, similar to real-world development workflows.
+
 
 # 👩‍💻 Author
 
