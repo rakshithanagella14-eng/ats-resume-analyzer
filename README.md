@@ -1,120 +1,105 @@
 
+# 🚀 ATS Resume Intelligence System
 
-# ATS Resume Analyzer using python
+A web-based application that analyzes resumes against job descriptions and calculates an **ATS compatibility score using a weighted skill-matching algorithm**.
 
-A web application that analyzes resumes and compares them with job descriptions to calculate an ATS (Applicant Tracking System) compatibility score.
-
-Live Demo:
+🔗 **Live Demo:**  
 https://ats-resume-analyzer-gtnq.onrender.com
 
+---
 
-## Why This Project?
+# 🎯 Problem Statement
 
-Many resumes get rejected by Applicant Tracking Systems (ATS) before reaching recruiters due to missing or mismatched skills.
+Most resumes are rejected by Applicant Tracking Systems (ATS) due to poor keyword alignment and missing critical skills.
 
-This project was built to simulate how ATS systems evaluate resumes and to help users understand:
-- Which skills match a job description
-- Which important skills are missing
-- How well their resume aligns with a role
+This project simulates ATS behavior and helps users:
+- Identify matching skills
+- Detect missing critical skills
+- Improve resume-job alignment
 
 ---
 
-## What Makes This Project Different?
+# ⚡ Key Features
 
-Unlike basic resume keyword checkers, this project:
-
-- Provides a clear ATS compatibility score
-- Identifies both matched and missing skills
-- Visualizes results using charts for better understanding
-- Offers a simple web interface for real-time analysis
+- 📄 Upload and analyze PDF resumes  
+- 🧠 Intelligent **skill detection system**  
+- ⚖️ **Weighted ATS scoring algorithm** (prioritizes important skills)  
+- 📊 Visual representation using charts  
+- ❌ Missing skills identification  
+- 💡 Automated **suggestion engine** for improvement  
 
 ---
 
+# 🧠 Engineering Highlights
 
-## Tech Stack
+- Designed a **rule-based skill extraction engine**
+- Implemented a **dynamic weighting system** for job-specific scoring
+- Optimized performance using **set-based lookups**
+- Built a **modular backend structure** for scalability
+- Integrated frontend visualization using Chart.js
 
-Backend:
-Python
-Flask
+---
 
-Libraries:
-PyPDF2
-Chart.js
+# 🛠 Tech Stack
 
-Tools:
-Git
-GitHub
-Render (for deployment)
+| Layer       | Technology              |
+|------------|------------------------|
+| Backend     | Python, Flask          |
+| Libraries   | PyPDF2                 |
+| Frontend    | HTML, CSS, Chart.js    |
+| Deployment  | Render                 |
+| Tools       | Git, GitHub            |
 
+---
 
-## How It Works
+# 🔄 System Workflow
 
-1. User uploads a resume PDF.
-2. User enters a job description.
-3. The system extracts text from the resume.
-4. Skills are detected from the resume.
-5. Job description skills are identified.
-6. ATS score is calculated based on skill matching.
-7. Results are displayed with charts.
+1. User uploads resume (PDF)
+2. Job description is provided
+3. Resume text is extracted
+4. Skills are detected from both inputs
+5. Weighted scoring algorithm calculates ATS score
+6. Missing skills + suggestions are generated
+7. Results displayed with visualization
 
+---
 
-## Installation (Run Locally)
-
-Clone the repository:
-
-git clone https://github.com/rakshithanagella14-eng/ats-resume-analyzer.git
-
-Go into the project folder:
-
-cd ats-resume-analyzer
-
-Install dependencies:
-
-pip install -r requirements.txt
-
-Run the application:
-
-python main.py
-
-Open in browser:
-
-http://127.0.0.1:5000
-
-
-## Project Screenshots
+# 📸 Screenshots
 
 ### Home Page
-![alt text](screenshots/homepage.png)
+![Home](screenshots/homepage.png)
 
+### Upload Interface
+![Upload](screenshots/upload.png)
 
-### Resume Upload
-![alt text](screenshots/upload.png)
+### Results
+![Results](screenshots/results.png)
 
+### Chart Visualization
+![Chart](screenshots/chart.png)
 
-### ATS Analysis Result
-![alt text](screenshots/results.png)
+---
 
+# ⚙️ Installation
 
-### ATS Analysis chart
-![alt text](screenshots/chart.png)
+```bash
+git clone https://github.com/rakshithanagella14-eng/ats-resume-analyzer.git
+cd ats-resume-analyzer
+pip install -r requirements.txt
+python main.py
+```
 
+---
 
-## Future Improvements
+# 📈 Future Improvements
 
-- Support DOCX resume format
-- Advanced NLP skill detection
-- Resume suggestions for improvement
-- Multiple job comparison
+- NLP-based skill extraction (instead of keyword matching)
+- Support for DOCX resumes
+- AI-based resume improvement suggestions
+- Multi-job comparison feature
 
+---
 
-## Development Note
+# 👩‍💻 Author
 
-This project was built in a short time frame to simulate rapid prototyping and iterative development. 
-
-The commit history reflects continuous improvements, debugging, and feature additions, similar to real-world development workflows.
-
-
-
-## Author
-
-Nagella Rakshitha
+**Nagella Rakshitha**
